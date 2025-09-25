@@ -56,11 +56,11 @@ const StudentManager = () => {
     if (!validateForm()) return;
     try {
       await axios.post(`${baseUrl}/add`, student);
-      setMessage('Student added successfully.');
+      setMessage('Doctor added successfully.');
       fetchAllStudents();
       resetForm();
     } catch (error) {
-      setMessage('Error adding student.');
+      setMessage('Error adding Doctor.');
     }
   };
 
@@ -68,11 +68,11 @@ const StudentManager = () => {
     if (!validateForm()) return;
     try {
       await axios.put(`${baseUrl}/update`, student);
-      setMessage('Student updated successfully.');
+      setMessage('Doctor updated successfully.');
       fetchAllStudents();
       resetForm();
     } catch (error) {
-      setMessage('Error updating student.');
+      setMessage('Error updating Doctor.');
     }
   };
 
@@ -100,7 +100,7 @@ const StudentManager = () => {
   const handleEdit = (stud) => {
     setStudent(stud);
     setEditMode(true);
-    setMessage(`Editing student with ID ${stud.id}`);
+    setMessage(`Editing Doctor with ID ${stud.id}`);
   };
 
   const resetForm = () => {
@@ -132,7 +132,7 @@ const StudentManager = () => {
       <h2>Doctor Management </h2>
 
       <div>
-        <h3>{editMode ? 'Edit Student' : 'Add Doctor'}</h3>
+        <h3>{editMode ? 'Edit Doctor' : 'Add Doctor'}</h3>
         <div className="form-grid">
           <input type="number" name="id" placeholder="ID" value={student.id} onChange={handleChange} />
           <input type="text" name="name" placeholder="Name" value={student.name} onChange={handleChange} />
