@@ -129,10 +129,10 @@ const StudentManager = () => {
 )}
 
 
-      <h2>Student Management - Happy Independence</h2>
+      <h2>Doctor Management - Happy Independence</h2>
 
       <div>
-        <h3>{editMode ? 'Edit Student' : 'Add Student'}</h3>
+        <h3>{editMode ? 'Edit Student' : 'Add Doctor'}</h3>
         <div className="form-grid">
           <input type="number" name="id" placeholder="ID" value={student.id} onChange={handleChange} />
           <input type="text" name="name" placeholder="Name" value={student.name} onChange={handleChange} />
@@ -142,29 +142,29 @@ const StudentManager = () => {
             <option value="FEMALE">FEMALE</option>
           </select>
           <select name="department" value={student.department} onChange={handleChange}>
-            <option value="">Select Department</option>
-            <option value="CSE">CSE</option>
-            <option value="ECE">ECE</option>
-            <option value="CS&IT">CS&IT</option>
+            <option value="">Select Specialised in</option>
+            <option value="CSE">Heart</option>
+            <option value="ECE">Neuro</option>
+            <option value="CS&IT">ENT</option>
           </select>
           <select name="program" value={student.program} onChange={handleChange}>
-            <option value="">Select Program</option>
-            <option value="B.Tech">B.Tech</option>
-            <option value="M.Tech">M.Tech</option>
-            <option value="BCA">BCA</option>
-            <option value="MCA">MCA</option>
+            <option value="">Select Blood Group</option>
+            <option value="B.Tech">A+</option>
+            <option value="M.Tech">A-</option>
+            <option value="BCA">B+</option>
+            <option value="MCA">O+</option>
           </select>
           <select name="year" value={student.year} onChange={handleChange}>
-            <option value="">Select Year</option>
+            <option value="">Select Experience</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
           </select>
           <select name="semester" value={student.semester} onChange={handleChange}>
-            <option value="">Select Semester</option>
-            <option value="ODD">ODD</option>
-            <option value="EVEN">EVEN</option>
+            <option value="">Any Previous Exp </option>
+            <option value="ODD">Yes</option>
+            <option value="EVEN">NO</option>
           </select>
           <input type="email" name="email" placeholder="Email" value={student.email} onChange={handleChange} />
           <input type="password" name="password" placeholder="Password" value={student.password} onChange={handleChange} />
@@ -173,10 +173,10 @@ const StudentManager = () => {
 
         <div className="btn-group">
           {!editMode ? (
-            <button className="btn-blue" onClick={addStudent}>Add Student</button>
+            <button className="btn-blue" onClick={addStudent}>Add Doctor</button>
           ) : (
             <>
-              <button className="btn-green" onClick={updateStudent}>Update Student</button>
+              <button className="btn-green" onClick={updateStudent}>Update Doctor</button>
               <button className="btn-gray" onClick={resetForm}>Cancel</button>
             </>
           )}
@@ -195,14 +195,14 @@ const StudentManager = () => {
 
         {fetchedStudent && (
           <div>
-            <h4>Student Found:</h4>
+            <h4>Doctor Found:</h4>
             <pre>{JSON.stringify(fetchedStudent, null, 2)}</pre>
           </div>
         )}
       </div>
 
       <div>
-        <h3>All Students</h3>
+        <h3>All Doctors</h3>
         {students.length === 0 ? (
           <p>No students found.</p>
         ) : (
