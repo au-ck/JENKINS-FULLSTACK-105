@@ -33,7 +33,7 @@ const StudentManager = () => {
       const res = await axios.get(`${baseUrl}/all`);
       setStudents(res.data);
     } catch (error) {
-      setMessage('Failed to fetch students.');
+      setMessage('Failed to fetch Doctor.');
     }
   };
 
