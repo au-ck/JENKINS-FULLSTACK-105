@@ -129,7 +129,7 @@ const StudentManager = () => {
 )}
 
 
-      <h2>Doctor Management - Happy Independence</h2>
+      <h2>Doctor Management </h2>
 
       <div>
         <h3>{editMode ? 'Edit Student' : 'Add Doctor'}</h3>
@@ -184,7 +184,7 @@ const StudentManager = () => {
       </div>
 
       <div>
-        <h3>Get Student By ID</h3>
+        <h3>Get Doctor By ID</h3>
         <input
           type="number"
           value={idToFetch}
